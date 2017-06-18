@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dest/normalize.css">
+    <link href="../less/base-all.css" rel="stylesheet">
+</head>
+
+<body>
+    <ol>
+        <li>
+            <h3><code>git</code> 连接 <code>github</code></h3>
+            <div>
+                <p>登录 <code>github</code> 后，在指定项目的按钮 <code>Clone or download</code> ，获取项目连接，在 <code>git</code> 界面输入以下代码：</p>
+                <pre>git clone git@github.com:michaelliao/bootstrap.git</pre>
+            </div>
+        </li>
+        <li>
+            <h3><code>git</code> 连接 <code>github</code> </h3>
+            <div>
+                <p>在git里生成公钥文件，连接github时所需命令如下：</p>
+                <pre>ssh-keygen -t rsa -C "your_email@youremail.com"</pre>
+                <p>命令生成后，可以在 <code>C:\Users\username\.ssh</code> 文件夹下，找到公钥文件，然后我们需要新建一个无后缀名的 <code>config</code> 文件，把里面加入如下内容，为了防止连接 <code>github</code> 失败。 </p>
+                <p>然后拷贝，<code>id_rsa.pub</code> 里面的内容，复制到 <code>github</code> 的 <code>ssh keys</code> 里面 ，便于通过 <code>ssh</code> 验证通信。</p>
+                <p>成功之后，我们就可以在git终端上，测试连接后，如果一切没问题的话，连接可以通讯，执行命令如下： </p>
+                <pre>ssh git@github.com </pre>
+
+            </div>
+        </li>
+    </ol>
+</body>
+
+</html>
