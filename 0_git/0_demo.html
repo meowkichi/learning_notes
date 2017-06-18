@@ -27,7 +27,17 @@
                 <p>然后拷贝，<code>id_rsa.pub</code> 里面的内容，复制到 <code>github</code> 的 <code>ssh keys</code> 里面 ，便于通过 <code>ssh</code> 验证通信。</p>
                 <p>成功之后，我们就可以在git终端上，测试连接后，如果一切没问题的话，连接可以通讯，执行命令如下： </p>
                 <pre>ssh git@github.com </pre>
-
+                <p>如果成功，则会显示如下代码：</p>
+                <pre>PTY allocation request failed on channel 0
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.Connection to github.com closed.</pre>
+                <p>设置上传用户名和邮箱代码：</p>
+                <pre>$ git config --global user.name "defnngj"//给自己起个用户名
+$ git config --global user.email  "defnngj@gmail.com"//填写自己的邮箱</pre>
+                <p>上传到<code>github</code>代码：</p>
+                <pre>
+执行git add .（把所有内容添加到索引库中）
+git commit -m "wrote a readme file" （提交索引库中的内容；-m是参数，表示注释内容，主要用来记录此次操作）
+git push -u origin master</pre>
             </div>
         </li>
     </ol>
